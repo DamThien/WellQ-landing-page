@@ -4,7 +4,7 @@ import { useState } from "react"
 import Link from "next/link"
 import { Button } from "@/components/ui/button"
 import { Menu, X } from "lucide-react"
-
+import Image from "next/image"
 export function Header() {
   const [isMenuOpen, setIsMenuOpen] = useState(false)
 
@@ -14,20 +14,7 @@ export function Header() {
         <nav className="flex items-center justify-between">
           {/* Logo */}
           <Link href="/" className="flex items-center gap-3">
-            <div className="w-10 h-10 rounded-xl bg-gradient-to-br from-purple-500 to-pink-500 flex items-center justify-center">
-              <svg
-                viewBox="0 0 24 24"
-                className="w-6 h-6 text-white"
-                fill="none"
-                stroke="currentColor"
-                strokeWidth="1.5"
-              >
-                <circle cx="12" cy="12" r="3" className="fill-white/80" />
-                <ellipse cx="12" cy="12" rx="10" ry="4" className="stroke-cyan-400" />
-                <ellipse cx="12" cy="12" rx="10" ry="4" transform="rotate(60 12 12)" className="stroke-cyan-400" />
-                <ellipse cx="12" cy="12" rx="10" ry="4" transform="rotate(120 12 12)" className="stroke-cyan-400" />
-              </svg>
-            </div>
+              <Image className="object-cover rounded-xl" width={40} height={40} src="/images/app-icon.png" alt="WellQ App Icon"  />
             <span className="text-xl font-bold bg-gradient-to-r from-white to-purple-200 bg-clip-text text-transparent">
               WellQ
             </span>
